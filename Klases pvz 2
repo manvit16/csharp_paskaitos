@@ -83,7 +83,7 @@ namespace uzduotis26
             return z3;
         }
 
-        private static void IsvestiVardus(Zmogus z1, Zmogus z2, Zmogus z3)
+        public static void IsvestiVardus(Zmogus z1, Zmogus z2, Zmogus z3)
         {
             Console.WriteLine(z1.Vardas + " " + z1.Pavarde);
             Console.WriteLine(z2.Vardas + " " + z2.Pavarde);
