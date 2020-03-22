@@ -1,0 +1,52 @@
+/*
+    2020-03-17, Mantas Vitkauskas
+    Uzduotis - 25, Klasiu pavyzdziai is 38 skaidre is 4 paskaitos
+*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace uzduotis25
+{
+    class Automobilis
+    {
+        public string Marke;
+        public string Modelis;
+        public int GamybosMetai;
+        public int Rida;
+
+        public Automobilis(string marke, string modelis, int gamybosMetai, int rida)
+        {
+            Marke = marke;
+            Modelis = modelis;
+            GamybosMetai = gamybosMetai;
+            Rida = rida;
+        }
+
+        public void Informacija()
+        {
+            Console.WriteLine("Automobilis {0} {1}, pagamintas {2} metais, nuvažiavo {3} km.",
+                Marke, Modelis, GamybosMetai, Rida);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Automobilis auto1 = new Automobilis("Audi", "A4", 2005, 10000);
+            Automobilis auto2 = new Automobilis("BMW", "E39", 1998, 354000);
+            Automobilis auto3 = new Automobilis("Porsche", "911", 2011, 5000);
+            auto1.Informacija();
+            auto2.Informacija();
+            auto3.Informacija();
+            Console.WriteLine(auto1.Modelis);
+            Console.WriteLine(auto2.Marke);
+            auto3.GamybosMetai = 1970;
+            auto3.Informacija();
+        }
+    }
+}
